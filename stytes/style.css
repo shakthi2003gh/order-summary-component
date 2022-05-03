@@ -1,0 +1,116 @@
+@import "/stytes/normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,700;0,900;1,500&display=swap");
+
+/* Color palette */
+:root {
+  --color-primary: hsl(245, 75%, 52%);
+  --color-heading: hsl(223, 47%, 23%);
+  --color-order-bg: hsl(225, 100%, 94%);
+  --color-bg: hsl(224, 23%, 55%);
+  --color-pale-blue: hsl(225, 100%, 98%);
+}
+
+/* Typography */
+body {
+  background: url(/images/pattern-background-mobile.svg) no-repeat;
+  background-color: var(--color-order-bg);
+  background-size: cover;
+  display: grid;
+  font-family: "Red Hat Display", sans-serif;
+  min-height: 100vh;
+  place-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    background: url(/images/pattern-background-desktop.svg) no-repeat;
+    background-color: var(--color-order-bg);
+    background-size: 100%;
+  }
+}
+
+p,
+.card__description {
+  margin: 0.5rem 0 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgb(109, 116, 135);
+  padding: 0 1.5rem;
+  line-height: 2.5ch;
+}
+
+/* Card block */
+.card-block {
+  width: clamp(330px, 100%, 330px);
+  background-color: white;
+  border-radius: 20px;
+  margin: 2rem;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2.5rem;
+}
+
+.content__heading {
+  color: var(--color-heading);
+  font-weight: 900;
+}
+
+.button {
+  text-decoration: none;
+  color: rgb(109, 116, 135);
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding: 1.5rem;
+}
+
+.button:hover {
+  color: var(--color-heading);
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  box-shadow: 0 7px 26px -3px var(--color-bg);
+  color: white;
+  margin-bottom: 0.9rem;
+}
+
+.button--primary:hover {
+  color: var(--color-pale-blue);
+  background-color: cornflowerblue;
+}
+
+.card__plan {
+  background-color: var(--color-pale-blue);
+  display: flex;
+  align-items: center;
+  margin: 2rem 0 2.5rem;
+  padding: 1.5rem;
+  justify-content: space-between;
+}
+
+.card__plan a {
+  font-size: 1.4rem;
+}
+
+.card__plan a:hover {
+  color: var(--color-primary);
+}
+
+.detail__heading {
+  margin: 0;
+  color: var(--color-heading);
+}
+
+.plan__subscription {
+  margin: 0;
+}
